@@ -6,5 +6,5 @@ class Humano(Personaje):
         self.profesion = profesion
 
     def presentar(self)->str:
-        return f"Hola, soy{self.nombre},tengo{self.edad} y trabajo {self.profesion}."
+        return f"Hola, soy {self.nombre},tengo {self.edad} años y trabajo {self.profesion}."
 
