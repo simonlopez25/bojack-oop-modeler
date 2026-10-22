@@ -3,6 +3,7 @@ from personajes.animales.animal import Animal
 from personajes.animales.animal_humanoide import AnimalHumanoide
 from personajes.animales.mascota import Mascota
 from personajes.animales.animal_salvaje import AnimalSalvaje
+from vehiculos.auto_deportivo import AutoDeportivo
 
 if __name__ == '__main__':
     print("_" * 50)
@@ -10,24 +11,10 @@ if __name__ == '__main__':
     print("_" * 50)
 
     diane = Humano("Diane Nguyen", 35, "Escritora")
-    print(diane.presentar())
+    lucas=Mascota("Lucas", 35, "Perro",diane.nombre)
+    porche=AutoDeportivo("Porche", "2016", "Exelentes","20%")
 
-    print("-" * 50)
 
-    lucas = Animal("Lucas", 5, "Perro")
-    print(lucas.presentar())
+    print(f"{diane.nombre} tiene una mascota llamada {lucas.nombre}, todos los dias va a su trabajo de {diane.profesion}"
+          f" y va en su cocoche deportivo de la marca {porche.marca} que salio en el año {porche.modelo}")
 
-    print("-" * 50)
-
-    bojack = AnimalHumanoide("Bojack", 5, "Caballo","Actor")
-    print(bojack.presentar())
-
-    print("-" * 50)
-
-    Lupe= Mascota("Lupe", 5, "Perro",bojack.nombre)
-    print(Lupe.presentar())
-
-    print("-" * 50)
-
-    Jaguar=AnimalSalvaje("Tito", 5, "jaguar o felinos","Jungla")
-    print(Jaguar.presentar())
